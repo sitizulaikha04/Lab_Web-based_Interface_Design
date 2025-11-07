@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Cake</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
+      color: #333;
+    }
+
+    #header, #footer {
+      background-color: #c072a7;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    #header span {
+      display: block;
+      font-size: 16px;
+      margin-top: 5px;
+      font-style: italic;
+    }
+
+    #content {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #4733f3;
+    }
+
+    form {
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="date"],
+    input[type="range"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #486fcf;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #6980d3;
+    }
+
+    .calculator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    output {
+      font-weight: bold;
+      font-size: 18px;
+      color: #5e69cc;
+      transition: all 0.3s ease;
+    }
+
+    #footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      #content {
+        padding: 20px 10px;
+      }
+
+      .calculator {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div id="header">
+    <h1>Wedding Cake</h1>
+    <span>"Wonderful wedding cake for a future wonderful little family!"</span>
+  </div>
+
+  <!-- Content Section -->
+  <div id="content">
+    <h2>Order Form</h2>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="date">Delivaring Date:</label>
+      <input type="date" id="date" name="date">
+
+      <label for="kepuasan">Satisfaction Level (0-10):</label>
+      <input type="range" id="satisfaction" name="satisfaction" min="0" max="10">
+    </form>
+
+    <h2>Cake Total</h2>
+    <form class="calculator" oninput="total.value=(parseInt(cake1.value)||0 )+ (parseInt(cake2.value)||0)">
+      <label for="cake1">Belgium Chocolate Fountain Cake:</label>
+      <input id="cake1" type="number" value="0" placeholder="Belgium Chocolate Fountain Cake">
+      
+      <label for="cake2">Strawberry Cheese Fountain Cake:</label>
+      <input id="cake2" type="number" value="0" placeholder="Strawberry Cheese Fountain Cake">
+
+      <label for="total">Total Cakes:</label>
+      <output id="total" for="cake1 cake2">0</output>
+      <br><br>
+      <input type="submit" value="Submit order">
+    </form>
+  </div>
+
+  <!-- Footer Section -->
+  <div id="footer">
+    <p>Contact us: weddingcake@order.com</p>
+    <p>&copy; 2025 Wedding Cake Enterprise</p>
+  </div>
+  
+</body>
+</html>
