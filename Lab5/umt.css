@@ -1,0 +1,164 @@
+body {
+  font-family: 'Google Fonts', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  padding: 250px;
+}
+
+
+/* Background image */
+header {
+  position: relative;              /* allows overlay positioning */
+  background-image: url("UMTbackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 250px;
+  text-align: center;
+  color: black;
+}
+
+/* Transparent overlay on top of background image */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* white with 50% transparency */
+  z-index: 0; /* sits behind text */
+}
+
+/* Ensure text and nav stay above overlay */
+header h1 {
+  position: relative;
+  z-index: 1;
+}
+header nav {
+  position: bottom;
+  z-index: 1;
+}
+
+/* Navigation bar */
+nav {
+  position: absolute;              /* position relative to header */
+  bottom: 0px;                       /* stick to bottom of header */
+  left: 50%;                       /* start at horizontal center */
+  transform: translateX(-50%);     /* shift back by half width to center */
+  width: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(214, 112, 248);
+  text-align: center;              /* centers inline-block items */
+}
+
+nav li {
+  display: inline-block;           /* replaces float */
+}
+
+nav li a {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: rgb(162, 70, 212);
+}
+
+
+/* Main content */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.text-block {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.text-block article {
+  margin-bottom: 20px;
+}
+
+.image-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-right img {
+  max-width: 600px;
+  height: auto;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Section headings */
+h2 {
+  color: #5a2580;
+  transition: color 0.3s ease;
+}
+
+h2:hover {
+  color: #3b1456;
+}
+
+h3 {
+  color: #0b172f;
+}
+
+/* Table styling */
+#courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#courses-table th, #courses-table td {
+  border: 1px solid #0b0505;
+  padding: 10px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+#courses-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#courses-table tr:hover {
+  background-color: #b5e8ee;
+}
+
+/* Footer styling */
+footer {
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9em;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
