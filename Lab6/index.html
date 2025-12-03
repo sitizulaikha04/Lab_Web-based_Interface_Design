@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhypen Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <!-- Intro -->
+        <h1>Welcome to the ENHYPEN Quiz!</h1>
+        <figure>
+        <img src="enhypen.jpg" alt="ENHYPEN Group Photo" class="enhypen-img"> <!-- Image -->
+        <figcaption class="image-caption">Enhypen MAMA Awards 2025</figcaption>
+    </figure> 
+    </header>
+
+    <h2>Choose the right answer!</h2>
+    <section id="quiz"> <!-- Display question -->
+        <div id="question-container"></div>
+        <div id="options-container"></div> <!-- Display options -->
+        <div id="timer">Time left: <span id="time">30</span> seconds</div> <!-- Display timer -->
+        <div id="feedback"></div> <!-- Display feedback -->
+        <button id="submit-btn">Submit Answer</button> <!-- Display submit button -->
+        <button id="next-btn" style="display:none;">Next Question</button> <!-- Display navigate button -->
+    </section>
+
+    <footer>
+        <div id="score-container"></div> <!-- Display score -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
